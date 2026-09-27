@@ -23,19 +23,16 @@ The Arduino controls the drilling process depending on a control signal and a li
 * Light barrier
 * Simulated drilling module
 
-## Used pins
+## Main Pins
 
-Pin 9 controls the drill motor.
-
-Pin A1 controls the downward movement of the drill.
-
-Pin A2 controls the upward movement of the drill.
-
-Pin A3 is used for the status LED.
-
-Pin 2 is used for the SPS control signal.
-
-Pin 3 is connected to the workpiece light barrier.
+| Arduino Pin | Function                |
+| ----------- | ----------------------- |
+| 9           | Drill motor             |
+| A1          | Lower drill             |
+| A2          | Raise drill             |
+| A3          | Status LED              |
+| 2           | Control signal (SPS)    |
+| 3           | Workpiece light barrier |
 
 ## How it works
 
