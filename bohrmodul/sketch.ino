@@ -28,7 +28,7 @@ void setup() {
 
 void loop() {
   
-  verarbeiteUART;
+  verarbeiteUART();
    if (digitalRead(SPS) == LOW && digitalRead(lichtschrankeWerkstueck) == LOW) {
      analogWrite(bohrerDrehen, 191);
      digitalWrite(bohrerSenken, HIGH);
