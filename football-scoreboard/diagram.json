@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 19.8, "left": 9, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -195.2,
+      "left": 15.2,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -201.83, "left": -44.51, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -121.56, "left": -63.36, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 35,
+      "left": 345.6,
+      "attrs": { "color": "green", "bounce": "0" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -22.6,
+      "left": 345.6,
+      "attrs": { "color": "green", "bounce": "0" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "led1",
+      "top": -57.6,
+      "left": -9.6,
+      "attrs": { "text": "Lichtschranke und Taster sind bei Betätigung/Unterbrechung LOW." }
+    }
+  ],
+  "connections": [
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-49.22", "v413", "h284.42", "v-57.5" ] ],
+    [ "gnd1:GND", "lcd1:GND", "black", [ "v0" ] ],
+    [ "vcc1:VCC", "lcd1:VCC", "red", [ "v20.19", "h22.57", "v-0.1" ] ],
+    [ "uno:GND.3", "btn2:2.l", "black", [ "v30.55", "h126.43", "v-230.6" ] ],
+    [ "btn1:2.l", "uno:GND.2", "black", [ "h-17.06", "v182.6", "h-147.67" ] ],
+    [ "btn2:1.l", "uno:3", "green", [ "h0" ] ],
+    [ "btn1:1.l", "uno:2", "green", [ "h-38.4", "v-38.4", "h-9.6" ] ],
+    [ "uno:A5", "lcd1:SCL", "green", [ "v47.9", "h-283.7", "v-393.6" ] ]
+  ],
+  "dependencies": {}
+}
